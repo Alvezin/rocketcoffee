@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script type= "module" src="scripts/script.js"></script>
     <title>RocketCoffee</title>
 </head>
 <body>
     <img class="blur blur2" src="assets/blur-2.png" alt="">
     <header>
 
-        <a class="header__logo" href="#"><img src="assets/logo-desktop.svg" alt="Logo da página"></a>
+        <div id="logo-nome">
+            <a class="header__logo" href="#"><img src="assets/logo-desktop.svg" alt="Logo da página"></a>
+            <h2>RocketSeat</h2>
+        </div>
 
-        <div>
+        <div class="navigation">
             <nav>
+                <button id="menu-btn" ><img src="assets/menu-buguer-open.svg" alt=""></button>
                 <ul class="menu__nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Menu</a></li>
@@ -25,10 +30,11 @@
             </nav>
         </div>
 
-        <button>Pegar meu café</button>
+        <button id="cafe">Pegar meu café</button>
         
     </header>
     <main>
+        <div><p id="text">O café que fará seu código decolar para o próximo nível</p> </div>
         <h1 class="d" >Great Coffee</h1>
         <h1 class="special"> &#x3C; Great Code &#x2215;&#x3E;</Great> </h1>
         <div>

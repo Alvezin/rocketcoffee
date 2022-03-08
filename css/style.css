@@ -33,6 +33,17 @@ header {
 }
 header div {
   z-index: 100000;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+header div h2 {
+  color: white;
+  width: 70%;
+  display: none;
+}
+header div #menu-btn {
+  display: none;
 }
 header .menu__nav {
   list-style: none;
@@ -64,6 +75,11 @@ main {
   display: flex;
   flex-direction: column;
 }
+main #text {
+  font-size: 2rem;
+  margin: 2rem;
+  display: none;
+}
 main h1 {
   z-index: 1000;
   font-family: "Manrope", sans-serif;
@@ -84,6 +100,47 @@ main .coffee {
   z-index: 1000;
   width: 55.18%;
   height: 100%;
+}
+
+@media screen and (max-width: 855px) {
+  header div .header__logo {
+    display: none;
+  }
+  header div h2 {
+    display: block;
+  }
+  header .navigation #menu-btn {
+    display: block;
+  }
+  header .menu__nav {
+    display: none;
+    position: relative;
+    top: 170px;
+  }
+  header .menu__nav li {
+    margin-bottom: 20px;
+  }
+  header #cafe {
+    position: relative;
+    top: 300px;
+    right: 35vw;
+  }
+
+  main div {
+    width: 50%;
+    margin: auto;
+  }
+  main div #text {
+    display: block;
+    text-align: justify;
+  }
+  main .d {
+    margin-top: 150px;
+  }
+
+  body {
+    height: 100vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
