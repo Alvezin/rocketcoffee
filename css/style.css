@@ -75,6 +75,7 @@ main div {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 294px);
 }
 main .coffee {
   z-index: 1000;
