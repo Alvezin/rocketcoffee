@@ -103,6 +103,11 @@ main{
         width: 55.18%;
         height: 100%;
     }
+    & .blur-mobile{
+        //display: none;
+        width: 150vw;
+        position: relative;
+    }
 }
 
 
@@ -135,24 +140,50 @@ main{
             position: relative;
             top: 300px;
             right: 35vw;
+            
         }
     }
     main{
+        
         & div{
-            width: 50%;
+            width: 100%;
+            height: 100%;
             margin: auto;
             & #text{
                 display: block;
                 text-align: justify;
             }
+            & .coffee{
+                display: flex;
+                width: 70%;
+                height: 100%;
+                z-index: 1000000;
+                right: 300px;
+
+            }
+            & .blur-mobile{
+                width: 100vw;
+            }
         }
         & .d{
             margin-top: 150px;
         }
+        
 
         
     }
     body{
         height: 100vh;
+        & .blur{
+            display: block;
+            position: absolute;
+            width: 50%;
+        }
+        & .blur2{
+            display: none;
+        }
+        & .blur1{
+           display: none;
+        }
     }
 }

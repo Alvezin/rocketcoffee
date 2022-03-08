@@ -101,6 +101,10 @@ main .coffee {
   width: 55.18%;
   height: 100%;
 }
+main .blur-mobile {
+  width: 150vw;
+  position: relative;
+}
 
 @media screen and (max-width: 855px) {
   header div .header__logo {
@@ -127,12 +131,23 @@ main .coffee {
   }
 
   main div {
-    width: 50%;
+    width: 100%;
+    height: 100%;
     margin: auto;
   }
   main div #text {
     display: block;
     text-align: justify;
+  }
+  main div .coffee {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    z-index: 1000000;
+    right: 300px;
+  }
+  main div .blur-mobile {
+    width: 100vw;
   }
   main .d {
     margin-top: 150px;
@@ -140,6 +155,17 @@ main .coffee {
 
   body {
     height: 100vh;
+  }
+  body .blur {
+    display: block;
+    position: absolute;
+    width: 50%;
+  }
+  body .blur2 {
+    display: none;
+  }
+  body .blur1 {
+    display: none;
   }
 }
 
