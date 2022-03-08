@@ -31,18 +31,21 @@ header {
   justify-content: space-around;
   align-items: center;
 }
+header div {
+  z-index: 100000;
+}
 header .menu__nav {
-  z-index: 1000;
   list-style: none;
   display: flex;
   gap: 40px;
 }
 header a {
+  z-index: 10000;
   text-decoration: none;
   color: #FFF;
 }
 header button {
-  z-index: 1000;
+  z-index: 10000;
   background-color: transparent;
   border: 2px solid #8257E5;
   border-radius: 8px;
@@ -79,7 +82,8 @@ main div {
 }
 main .coffee {
   z-index: 1000;
-  width: 47.18%;
+  width: 55.18%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

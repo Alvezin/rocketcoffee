@@ -30,20 +30,22 @@ header{
     justify-content: space-around;
     align-items: center;
     
-
+    & div {
+        z-index: 100000;
+    }
     & .menu__nav{
-        z-index: 1000;
-       list-style: none;
-       display: flex;
-       gap: 40px;
+        list-style: none;
+        display: flex;
+        gap: 40px;
 
     }
     a {
+        z-index: 10000;
         text-decoration: none;
         color: $text-color;
     }
     & button{
-        z-index: 1000;
+        z-index: 10000;
         background-color: transparent;
         border: 2px solid $btn-color;
         border-radius: 8px;
@@ -81,6 +83,7 @@ main{
     }
     & .coffee {
         z-index: 1000;
-        width: 47.18%;
+        width: 55.18%;
+        height: 100%;
     }
 }
