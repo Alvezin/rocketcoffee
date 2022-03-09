@@ -121,11 +121,6 @@ main{
 
 @media screen and (max-width: 855px) {
     header{
-        & #logo-nome{
-            position: relative;
-            left: 29vw;
-            top: 1vw;
-        }
         & div{
             & .header__logo{
                 display: none;
@@ -138,6 +133,12 @@ main{
         & .navigation{
             position: relative;
             left: 40vw;
+            & #nav.active > .menu__nav{
+                display: flex;
+            }
+            & #nav.active > #menu-btn{
+                left: 21.5vw;
+            }
             & nav{
                 height: 4vh; 
             }
@@ -148,7 +149,7 @@ main{
         }
         & .menu__nav{
             z-index: 9000099990000;
-            display: flex;
+            display: none;
             flex-direction: column;
             position: relative;
             top: 25px;
@@ -180,7 +181,7 @@ main{
         }
         & #cafe{
             position: relative;
-            top: 350px;
+            top: 300px;
             right: 31vw;
             
         }
