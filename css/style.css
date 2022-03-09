@@ -31,18 +31,26 @@ header {
   justify-content: space-around;
   align-items: center;
 }
-header div {
+header nav :hover {
+  border-color: #a488e8;
+  transition: 0.5s;
+}
+header #cafe {
   z-index: 100000;
   width: 200px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-header div h2 {
+header #cafe :hover {
+  background-color: #a488e8;
+}
+header h2 {
   color: white;
   width: 70%;
   display: none;
 }
-header div #menu-btn {
+header #menu-btn {
   display: none;
 }
 header .menu__nav {
@@ -56,15 +64,14 @@ header a {
   color: #FFF;
 }
 header button {
-  z-index: 10000;
+  z-index: 1000000;
   background-color: transparent;
   border: 2px solid #8257E5;
   border-radius: 8px;
   height: 40px;
-  width: 150px;
+  width: 60px;
   color: #FFF;
   cursor: pointer;
-  text-transform: uppercase;
   text-transform: uppercase;
 }
 
@@ -101,65 +108,99 @@ main .coffee {
   width: 55.18%;
   height: 100%;
 }
-main .blur-mobile {
-  width: 150vw;
-  position: relative;
-}
 
 @media screen and (max-width: 855px) {
+  header #logo-nome {
+    position: relative;
+    left: 29vw;
+    top: 1vw;
+  }
   header div .header__logo {
     display: none;
   }
   header div h2 {
     display: block;
   }
+  header .navigation {
+    position: relative;
+    left: 40vw;
+  }
+  header .navigation nav {
+    height: 4vh;
+  }
   header .navigation #menu-btn {
     display: block;
+    position: relative;
   }
   header .menu__nav {
-    display: none;
+    z-index: 9000099990000;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    top: 170px;
+    top: 25px;
+    right: 39%;
+    width: 50vw;
+    height: 60vh;
+    text-align: center;
+    text-shadow: -1px -1px 0 #8257E5, 1px -1px 0 #8257E5, -1px 1px 0 #8257E5, 1px 1px 0 #8257E5;
+    color: gray;
+    background-color: black;
+    border: 2px solid #8257E5;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    gap: 0px;
   }
   header .menu__nav li {
-    margin-bottom: 20px;
+    height: 20%;
+  }
+  header .menu__nav li :hover {
+    background-color: #a488e8;
+  }
+  header .menu__nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
   header #cafe {
     position: relative;
-    top: 300px;
-    right: 35vw;
+    top: 350px;
+    right: 31vw;
   }
 
   main div {
-    width: 100%;
+    width: 61%;
     height: 100%;
     margin: auto;
   }
   main div #text {
     display: block;
     text-align: justify;
+    font-size: 1.6rem;
+    color: #8257E5;
+    font-weight: bold;
   }
   main div .coffee {
     display: flex;
-    width: 70%;
+    width: 500px;
     height: 100%;
     z-index: 1000000;
-    right: 300px;
-  }
-  main div .blur-mobile {
-    width: 100vw;
   }
   main .d {
     margin-top: 150px;
+    font-size: 3rem;
+  }
+  main .special {
+    font-size: 3rem;
   }
 
   body {
-    height: 100vh;
+    overflow-x: hidden;
   }
   body .blur {
     display: block;
-    position: absolute;
-    width: 50%;
   }
   body .blur2 {
     display: none;

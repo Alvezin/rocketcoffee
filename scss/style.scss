@@ -29,20 +29,32 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
-    & div {
+    & nav{
+        & :hover{
+            border-color: #a488e8;
+            transition: .5s;
+        }
+    }
+    & #cafe {
         z-index: 100000;
         width: 200px;
         display: flex;
         justify-content: center;
-        & h2{
-            color: white;
-            width: 70%;
-            display: none;
+        align-items: center;
+        & :hover{
+            background-color: #a488e8;
         }
-        & #menu-btn{
-            display: none;
-        }
+       
+    }
+    
+    & h2{
+        color: white;
+        width: 70%;
+        display: none;
+    }
+    & #menu-btn{
+        display: none;
+        
     }
     
     & .menu__nav{
@@ -57,17 +69,17 @@ header{
         color: $text-color;
     }
     & button{
-        z-index: 10000;
+        
+        z-index: 1000000;
         background-color: transparent;
         border: 2px solid $btn-color;
         border-radius: 8px;
         height: 40px;
-        width: 150px;
+        width: 60px;
         color: $text-color;
         cursor: pointer;
         text-transform: uppercase;
-        text-transform: uppercase;
-
+        
     }
 }
 
@@ -103,17 +115,17 @@ main{
         width: 55.18%;
         height: 100%;
     }
-    & .blur-mobile{
-        //display: none;
-        width: 150vw;
-        position: relative;
-    }
+   
 }
 
 
 @media screen and (max-width: 855px) {
-
     header{
+        & #logo-nome{
+            position: relative;
+            left: 29vw;
+            top: 1vw;
+        }
         & div{
             & .header__logo{
                 display: none;
@@ -124,60 +136,91 @@ main{
             
         }
         & .navigation{
+            position: relative;
+            left: 40vw;
+            & nav{
+                height: 4vh; 
+            }
             & #menu-btn{
                 display: block;
+                position: relative;
             }
         }
         & .menu__nav{
-            display: none;
+            z-index: 9000099990000;
+            display: flex;
+            flex-direction: column;
             position: relative;
-            top: 170px;
+            top: 25px;
+            right: 39%;
+            width: 50vw;
+            height: 60vh;
+            text-align: center;
+            text-shadow: -1px -1px 0 $btn-color, 1px -1px 0 $btn-color, -1px 1px 0 $btn-color, 1px 1px 0 $btn-color;
+            color: gray;
+            background-color: black;
+            border: 2px solid $btn-color;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            gap: 0px;
             & li{
-                margin-bottom: 20px;
+                height: 20%;
+                & :hover{
+                    background-color: #a488e8;
+                }
+            }
+            & a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
             }
         }
         & #cafe{
             position: relative;
-            top: 300px;
-            right: 35vw;
+            top: 350px;
+            right: 31vw;
             
         }
     }
     main{
         
         & div{
-            width: 100%;
+            width: 61%;
             height: 100%;
             margin: auto;
             & #text{
                 display: block;
                 text-align: justify;
+                font-size: 1.6rem;
+                color: $btn-color;
+                font-weight: bold;
             }
             & .coffee{
                 display: flex;
-                width: 70%;
+                width: 500px;
                 height: 100%;
                 z-index: 1000000;
-                right: 300px;
 
-            }
-            & .blur-mobile{
-                width: 100vw;
             }
         }
         & .d{
             margin-top: 150px;
+            font-size: 3rem;
+        }
+        & .special{
+            font-size: 3rem;
         }
         
 
         
     }
     body{
-        height: 100vh;
+        overflow-x: hidden;
         & .blur{
             display: block;
-            position: absolute;
-            width: 50%;
         }
         & .blur2{
             display: none;
