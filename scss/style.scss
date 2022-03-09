@@ -21,30 +21,17 @@ body{
         height: 100%;
         top: 43%;
         left: 0%;
-    }
-   
+    } 
 }
+
 header{
     height: 120px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
     align-items: center;
     & nav{
-        & :hover{
-            border-color: #a488e8;
-            transition: .5s;
-        }
-    }
-    & #cafe {
-        z-index: 100000;
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        & :hover{
-            background-color: #a488e8;
-        }
-       
+        z-index: 9999999;
     }
     
     & h2{
@@ -53,15 +40,20 @@ header{
         display: none;
     }
     & #menu-btn{
-        display: none;
-        
+        & #menu-fechar{
+            display: none;
+        }
+        display: none; 
+    }
+    & :hover{
+        border-color: #a488e8;
+        transition: .5s;
     }
     
     & .menu__nav{
         list-style: none;
         display: flex;
         gap: 40px;
-
     }
     a {
         z-index: 10000;
@@ -69,17 +61,15 @@ header{
         color: $text-color;
     }
     & button{
-        
         z-index: 1000000;
         background-color: transparent;
         border: 2px solid $btn-color;
         border-radius: 8px;
         height: 40px;
-        width: 60px;
+        width: 130px;
+        cursor: pointer; 
         color: $text-color;
-        cursor: pointer;
         text-transform: uppercase;
-        
     }
 }
 
@@ -89,6 +79,23 @@ main{
     color: white;
     display: flex;
     flex-direction: column;
+    & #cafe {
+        z-index: 100000;
+        width: 200px;
+        color: $text-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000000;
+        background-color: transparent;
+        border: 2px solid $btn-color;
+        border-radius: 8px;
+        height: 50px;
+        width: 150px;
+        color: $text-color;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
     & #text{
         font-size: 2rem;
         margin: 2rem;
@@ -115,47 +122,53 @@ main{
         width: 55.18%;
         height: 100%;
     }
-   
 }
 
 
 @media screen and (max-width: 855px) {
     header{
+        justify-content: space-around;
         & div{
             & .header__logo{
                 display: none;
             }
             & h2{
-                display: block;
-            }
-            
-        }
-        & .navigation{
-            position: relative;
-            left: 40vw;
-            & #nav.active > .menu__nav{
                 display: flex;
             }
-            & #nav.active > #menu-btn{
-                left: 21.5vw;
-            }
-            & nav{
-                height: 4vh; 
-            }
-            & #menu-btn{
-                display: block;
-                position: relative;
-            }
+        }
+        & #menu-btn{
+            justify-content: center;
+            align-items: center;
+           
+            display: block;
+            position: relative;
+        }
+        & #nav.active {
+            display: flex;
+        }
+        & #nav.active > #menu-fechar{
+            display: flex;
+
+        }
+        & #nav.active > #menu-abrir{
+            display: none;
+        }
+        & nav{
+            height: 4vh; 
+        }  
+        & #nav{
+            display: none;
+            position: absolute;
+            top: 120px;
+            width: 100vw;
+            height: calc(100vh - 120px);
         }
         & .menu__nav{
             z-index: 9000099990000;
-            display: none;
             flex-direction: column;
             position: relative;
-            top: 25px;
-            right: 39%;
-            width: 50vw;
-            height: 60vh;
+            width: 100%;
+            height: 100%;
             text-align: center;
             text-shadow: -1px -1px 0 $btn-color, 1px -1px 0 $btn-color, -1px 1px 0 $btn-color, 1px 1px 0 $btn-color;
             color: gray;
@@ -179,32 +192,28 @@ main{
                 height: 100%;
             }
         }
-        & #cafe{
-            position: relative;
-            top: 300px;
-            right: 31vw;
-            
-        }
     }
     main{
-        
-        & div{
-            width: 61%;
-            height: 100%;
-            margin: auto;
-            & #text{
-                display: block;
-                text-align: justify;
-                font-size: 1.6rem;
-                color: $btn-color;
-                font-weight: bold;
+        & #cafe {
+            
+            & :hover{
+                background-color: #2c1366;
             }
+        }
+        & #text{
+            display: block;
+            width: 60%;
+            text-align: justify;
+            font-size: 1.6rem;
+            color: $btn-color;
+            font-weight: bold;
+        }
+        & div{       
             & .coffee{
                 display: flex;
                 width: 500px;
                 height: 100%;
                 z-index: 1000000;
-
             }
         }
         & .d{
@@ -213,10 +222,7 @@ main{
         }
         & .special{
             font-size: 3rem;
-        }
-        
-
-        
+        }        
     }
     body{
         overflow-x: hidden;
@@ -230,4 +236,5 @@ main{
            display: none;
         }
     }
+    
 }
