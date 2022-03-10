@@ -48,7 +48,7 @@ header #menu-btn #menu-fechar {
   display: none;
 }
 header :hover {
-  border-color: #a488e8;
+  border-color: #a797ce;
   transition: 0.5s;
 }
 header .menu__nav {
@@ -128,6 +128,8 @@ main .coffee {
   }
   header #nav.active {
     display: flex;
+    animation-name: slide;
+    animation-duration: 0.5s;
   }
   header #nav.active > #menu-fechar {
     display: flex;
@@ -163,9 +165,6 @@ main .coffee {
   }
   header .menu__nav li {
     height: 20%;
-  }
-  header .menu__nav li :hover {
-    background-color: #a488e8;
   }
   header .menu__nav a {
     display: flex;
@@ -215,7 +214,7 @@ main .coffee {
 }
 @media screen and (max-width: 515px) {
   main #text {
-    width: 80%;
+    width: 80% 1;
   }
   main div .coffee {
     width: 100%;
@@ -225,6 +224,14 @@ main .coffee {
   }
   main .d, main .special {
     font-size: 2.3rem;
+  }
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
