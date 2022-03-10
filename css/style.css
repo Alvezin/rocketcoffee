@@ -44,9 +44,6 @@ header #menu-btn {
   display: none;
   width: 50px;
 }
-header #menu-btn #menu-fechar {
-  display: none;
-}
 header :hover {
   border-color: #a797ce;
   transition: 0.5s;
@@ -131,12 +128,6 @@ main .coffee {
     animation-name: slide;
     animation-duration: 0.5s;
   }
-  header #nav.active > #menu-fechar {
-    display: flex;
-  }
-  header #nav.active > #menu-abrir {
-    display: none;
-  }
   header nav {
     height: 4vh;
   }
@@ -152,7 +143,7 @@ main .coffee {
     flex-direction: column;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 90%;
     text-align: center;
     text-shadow: -1px -1px 0 #8257E5, 1px -1px 0 #8257E5, -1px 1px 0 #8257E5, 1px 1px 0 #8257E5;
     color: gray;
@@ -162,6 +153,9 @@ main .coffee {
     text-transform: uppercase;
     font-weight: bold;
     gap: 0px;
+  }
+  header .menu__nav :hover {
+    background-color: #a797ce;
   }
   header .menu__nav li {
     height: 20%;
