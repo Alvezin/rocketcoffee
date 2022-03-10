@@ -1,7 +1,7 @@
 
 
 let btn = document.getElementById('menu-btn');
-btn.addEventListener('click', toggleMenu)
+btn.addEventListener('click', toggleMenu);
 
 function toggleMenu(){
     let nav = document.getElementById('nav');
@@ -11,7 +11,7 @@ function toggleMenu(){
 
 
 
-
+/*
 if (window.matchMedia('(min-width: 855px)').matches) {
     let cabeca = document.getElementsByTagName('header')[0];
     let cafe = document.getElementById('cafe');
@@ -23,3 +23,4 @@ if (window.matchMedia('(min-width: 855px)').matches) {
 
     principal.appendChild(cafe);
 }
+*/
