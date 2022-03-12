@@ -7,7 +7,6 @@
 }
 body{
     background-color: $fundo;
-    height: 70vh;
     position: relative;
     & .blur{
         position: absolute;
@@ -19,7 +18,7 @@ body{
     }
     & .blur1{
         height: 100%;
-        top: 43%;
+        top: 0%;
         left: 0%;
     } 
 }
@@ -30,6 +29,9 @@ header{
     justify-content: center;
     gap: 30px;
     align-items: center;
+    & #container__cafe{
+        z-index: 1000000000;
+    }
     & nav{
         z-index: 9999999;
     }
@@ -100,7 +102,7 @@ main{
         align-items: center;
         justify-content: center;
         height: calc(100vh - 294px);
-        width: 100vw;
+        width: 100%;
     }
     & .coffee {
         z-index: 1000;
@@ -142,6 +144,7 @@ main{
             top: 120px;
             width: 100vw;
             height: calc(100vh - 124px);
+            z-index: 9999999999999;
         }
         & .menu__nav{
             z-index: 9000099990000;
